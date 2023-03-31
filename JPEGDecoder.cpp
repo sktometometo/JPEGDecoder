@@ -5,7 +5,7 @@
  Public domain, Makoto Kurauchi <http://yushakobo.jp>
 */
 
-#include <SD.h>
+#include <FS.h>
 #include "JPEGDecoder.h"
 #include "picojpeg.h"
 
@@ -13,7 +13,7 @@
 JPEGDecoder JpegDec;
 
 JPEGDecoder::JPEGDecoder(){
-    mcu_x = 0 ;
+    mcu_x = 0 ;git@github.com:sktometometo/JPEGDecoder.git
     mcu_y = 0 ;
     is_available = 0;
     reduce = 0;
@@ -53,7 +53,7 @@ int JPEGDecoder::decode(char* pFilename, unsigned char pReduce){
     
     if(pReduce) reduce = pReduce;
     
-    g_pInFile = SD.open(pFilename, FILE_READ);
+    g_pInFile = SPIFFS.open(pFilename, FILE_READ);
     if (!g_pInFile)
         return -1;
 

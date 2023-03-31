@@ -16,3 +16,5 @@ SD カード上の JPEG ファイルをブロックごとにデコードし、�
 変更履歴
 ----
 V0.01 - 最初のリリース
+
+edited by k-shinjo according to https://blog.boochow.com/article/427690966.html
